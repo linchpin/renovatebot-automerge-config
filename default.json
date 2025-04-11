@@ -32,6 +32,7 @@
   "baseBranches": [
     "/^maintenance\\/.*/"
   ],
+  "platformAutomerge": true
   "packageRules": [
     {
       "commitMessagePrefix": "build(DEP): [Project] ",
@@ -88,6 +89,7 @@
         "!/^engines$/"
       ],
       "automerge": true,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
     },
     {
@@ -169,6 +171,7 @@
         "composer.json"
       ],
       "automerge": true,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
     },
     {
@@ -241,6 +244,7 @@
         "Confidence"
       ],
       "automerge": true,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
     },
     {
@@ -276,6 +280,7 @@
         "Confidence"
       ],
       "automerge": false,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
     },
     {
@@ -304,6 +309,7 @@
         "!node"
       ],
       "automerge": true,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}chore(NO-TASK): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}"
     },
     {
@@ -370,6 +376,7 @@
         "Adoption"
       ],
       "automerge": true,
+      "automergeType": "branch",
       "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
     },
     {
@@ -384,6 +391,7 @@
         "maintenance"
       ],
       "automerge": false,
+      "automergeType": "branch",
       "matchUpdateTypes": [
         "major"
       ],
@@ -424,6 +432,7 @@
       "groupName": "Custom Plugin(s) Composer Dependencies",
       "groupSlug": "maintenance-wordpress-custom-plugins-composer-minor",
       "automerge": true,
+      "automergeType": "branch",
       "matchFileNames": [
         "plugins/**/composer.json"
       ],
@@ -473,6 +482,7 @@
       "groupName": "Themes packagist.linchpin.com and wordpress.org",
       "groupSlug": "maintenance-wordpress-themes-composer-minor",
       "automerge": true,
+      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
@@ -536,6 +546,7 @@
       "groupName": "Plugins wordpress.org",
       "groupSlug": "maintenance-wordpress-org-plugins-composer-minor",
       "automerge": true,
+      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
@@ -599,6 +610,7 @@
       "groupName": "Plugins packagist.linchpin.com",
       "groupSlug": "maintenance-wordpress-linchpin-plugins-composer-minor",
       "automerge": true,
+      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
