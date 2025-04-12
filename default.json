@@ -32,7 +32,7 @@
   "baseBranches": [
     "/^maintenance\\/.*/"
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
   "packageRules": [
     {
       "commitMessagePrefix": "build(DEP): [Project] ",
@@ -59,8 +59,8 @@
         "/^npm/",
         "/^engines$/"
       ],
-      "automerge": false,
-      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "build(DEP): [Project] ",
@@ -88,9 +88,12 @@
         "!/^node$/",
         "!/^engines$/"
       ],
+      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
       "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "platform(DEP): [Project] ",
@@ -113,11 +116,11 @@
         "maintenance",
         "build"
       ],
-      "automerge": false,
       "matchFileNames": [
         "composer.json"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}platform(DEP): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}platform(DEP): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "platform(DEP): [Project] ",
@@ -141,8 +144,8 @@
       "matchFileNames": [
         "composer.json"
       ],
-      "automerge": false,
-      "commitBody": "{{#each upgrades as |upgrade|}}platform(DEP): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}platform(DEP): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "build(DEP): [Project] ",
@@ -170,9 +173,12 @@
       "matchFileNames": [
         "composer.json"
       ],
+      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
       "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "deps(NPM): [WordPress] ",
@@ -206,8 +212,8 @@
         "Passing",
         "Confidence"
       ],
-      "automerge": false,
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "deps(NPM): [WordPress] ",
@@ -243,9 +249,12 @@
         "Passing",
         "Confidence"
       ],
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
       "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "deps(NPM): [WordPress] ",
@@ -279,9 +288,8 @@
         "Passing",
         "Confidence"
       ],
-      "automerge": false,
-      "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "deps(NPM): [WordPress] - ",
@@ -308,9 +316,12 @@
       "matchPackageNames": [
         "!node"
       ],
+      "commitBody": "{{#each upgrades as |upgrade|}}chore(NO-TASK): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}",
       "automerge": true,
       "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}chore(NO-TASK): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}"
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "deps(CMP): [WordPress] ",
@@ -341,8 +352,8 @@
         "Age",
         "Adoption"
       ],
-      "automerge": false,
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "deps(CMP): [WordPress] ",
@@ -375,9 +386,12 @@
         "Age",
         "Adoption"
       ],
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
       "automergeType": "branch",
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "deps(CMP): [WordPress] ",
@@ -390,8 +404,6 @@
         "plugins",
         "maintenance"
       ],
-      "automerge": false,
-      "automergeType": "branch",
       "matchUpdateTypes": [
         "major"
       ],
@@ -410,10 +422,13 @@
         "Age",
         "Adoption"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "deps(CMP): [WordPress] ",
+      "groupName": "Custom Plugin(s) Composer Dependencies",
+      "groupSlug": "maintenance-wordpress-custom-plugins-composer-minor",
       "matchUpdateTypes": [
         "minor",
         "patch",
@@ -429,10 +444,6 @@
         "plugins",
         "maintenance"
       ],
-      "groupName": "Custom Plugin(s) Composer Dependencies",
-      "groupSlug": "maintenance-wordpress-custom-plugins-composer-minor",
-      "automerge": true,
-      "automergeType": "branch",
       "matchFileNames": [
         "plugins/**/composer.json"
       ],
@@ -445,7 +456,12 @@
         "Age",
         "Adoption"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": true,
+      "automergeType": "branch",
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "update(THEME): [WordPress] ",
@@ -481,8 +497,6 @@
       "commitMessagePrefix": "update(THEME): [WordPress] ",
       "groupName": "Themes packagist.linchpin.com and wordpress.org",
       "groupSlug": "maintenance-wordpress-themes-composer-minor",
-      "automerge": true,
-      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
@@ -510,7 +524,12 @@
         "Package",
         "Change"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": true,
+      "automergeType": "branch",
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "update(PLUGIN): [WordPress] ",
@@ -521,6 +540,8 @@
         "wordpress",
         "composer",
         "maintenance",
+        "plugins",
+        "major",
         "wporg"
       ],
       "matchUpdateTypes": [
@@ -539,14 +560,13 @@
         "Package",
         "Change"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "update(PLUGIN): [WordPress] ",
       "groupName": "Plugins wordpress.org",
       "groupSlug": "maintenance-wordpress-org-plugins-composer-minor",
-      "automerge": true,
-      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
@@ -574,7 +594,12 @@
         "Package",
         "Change"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": true,
+      "automergeType": "branch",
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     },
     {
       "commitMessagePrefix": "update(PLUGIN): [WordPress] ",
@@ -585,6 +610,8 @@
         "wordpress",
         "composer",
         "maintenance",
+        "plugins",
+        "major",
         "linchpinpkg"
       ],
       "matchUpdateTypes": [
@@ -603,14 +630,13 @@
         "Package",
         "Change"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": false
     },
     {
       "commitMessagePrefix": "update(PLUGIN): [WordPress] ",
       "groupName": "Plugins packagist.linchpin.com",
       "groupSlug": "maintenance-wordpress-linchpin-plugins-composer-minor",
-      "automerge": true,
-      "automergeType": "branch",
       "labels": [
         "wordpress",
         "composer",
@@ -638,7 +664,12 @@
         "Package",
         "Change"
       ],
-      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}"
+      "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
+      "automerge": true,
+      "automergeType": "branch",
+      "matchBaseBranches": [
+        "/^maintenance\\/.*/"
+      ]
     }
   ]
 }
