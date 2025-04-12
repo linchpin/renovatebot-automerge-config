@@ -90,7 +90,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -175,7 +175,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}build(DEP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -251,7 +251,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}deps(NPM): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -318,7 +318,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}chore(NO-TASK): {{{depName}}} from `{{{upgrade.currentValue}}}` to `{{{upgrade.newValue}}}`\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -388,7 +388,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -458,7 +458,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}deps(CMP): {{{depName}}} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -526,7 +526,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -596,7 +596,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
@@ -666,7 +666,7 @@
       ],
       "commitBody": "{{#each upgrades as |upgrade|}}update(PLUGIN): {{replace '-' ' ' (lookup (split depName '-') 1 ) }} from {{{upgrade.currentValue}}} to {{{upgrade.newValue}}}\n{{/each}}",
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchBaseBranches": [
         "/^maintenance\\/.*/"
       ]
