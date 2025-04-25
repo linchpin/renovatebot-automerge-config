@@ -15,7 +15,8 @@
     "groupName": null,
     "prBodyDefinitions": {
       "Change": "All locks refreshed"
-    }
+    },
+    "automerge": true
   },
   "ignoreDeps": [
     "husky",
@@ -34,6 +35,21 @@
   ],
   "platformAutomerge": true,
   "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "schedule": [
+        "before 6am on monday"
+      ]
+    },
     {
       "commitMessagePrefix": "build(DEP): [Project] ",
       "commitMessageSuffix": " - Major",
