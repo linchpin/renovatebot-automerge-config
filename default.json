@@ -125,6 +125,8 @@
       "matchPackageNames": [
         "/^php$/",
         "!/^wpackagist/",
+        "!/^wp-plugin/",
+        "!/^wp-theme/",
         "!/^linchpin/"
       ],
       "labels": [
@@ -155,6 +157,8 @@
       ],
       "matchPackageNames": [
         "!/^wpackagist/",
+        "!/^wp-plugin/",
+        "!/^wp-theme/",
         "!/^linchpin/"
       ],
       "matchFileNames": [
@@ -184,6 +188,8 @@
       "matchPackageNames": [
         "!/^php$",
         "!/^wpackagist/",
+        "!/^wp-plugin/",
+        "!/^wp-theme/",
         "!/^linchpin/"
       ],
       "matchFileNames": [
@@ -501,6 +507,7 @@
       ],
       "matchPackageNames": [
         "wpackagist-theme/**",
+        "wp-theme/**",
         "linchpin/**theme"
       ],
       "prBodyColumns": [
@@ -534,6 +541,7 @@
       ],
       "matchPackageNames": [
         "wpackagist-theme/**",
+        "wp-theme/**",
         "linchpin/**theme"
       ],
       "prBodyColumns": [
@@ -564,7 +572,8 @@
         "major"
       ],
       "matchPackageNames": [
-        "wpackagist-plugin/**"
+        "wpackagist-plugin/**",
+        "wp-plugin/**"
       ],
       "matchManagers": [
         "composer"
@@ -598,7 +607,8 @@
         "digest"
       ],
       "matchPackageNames": [
-        "wpackagist-plugin/**"
+        "wpackagist-plugin/**",
+        "wp-plugin/**"
       ],
       "matchManagers": [
         "composer"
@@ -634,7 +644,8 @@
         "major"
       ],
       "matchPackageNames": [
-        "linchpin/**"
+        "linchpin/**",
+        "!linchpin/coding-standards"
       ],
       "matchManagers": [
         "composer"
@@ -668,7 +679,8 @@
         "digest"
       ],
       "matchPackageNames": [
-        "linchpin/**"
+        "linchpin/**",
+        "!linchpin/coding-standards"
       ],
       "matchManagers": [
         "composer"
